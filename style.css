@@ -12,20 +12,59 @@
 
 #header {
     grid-area: 1 / 2 / 2 / 4;
+    display: grid;
+    grid-area: 1fr 1fr / 1fr
+}
+
+.header-upper-section {
+    display: grid;
+    grid-template: 1fr / 3fr 1fr;
+}
+
+.header-lower-section {
+    display: grid;
+    grid-template: 1fr / 3fr 2fr;
 }
 
 #dashboard {
     grid-area: 1 / 1 / 4 / 2;
+    display: grid;
+    grid-template: 3fr 10fr 5fr / 1fr;
 }
 
 #projects {
     grid-area: 2 / 2 / 4 / 3;
 }
 
+#projects-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
 #announcements {
     grid-area: 2 / 3 / 3 / 4;
 }
 
+#announcement-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+}
+
 #trending {
     grid-area: 3 / 3 / 4 / 4;
+}
+
+#trending-container {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr;
+}
+
+#trending-container .topic {
+    display: grid;
+    grid-template: 1fr / 1fr 3fr;
+}
+
+#trending-container .topic .topic-details {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1fr;
 }
